@@ -10,4 +10,9 @@
 
 @interface testSecondViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segSelector;
+@property (weak, nonatomic) IBOutlet UILabel *lblIndicator;
+
+- (IBAction)segSelectionChanged:(id)sender;
+
 @end

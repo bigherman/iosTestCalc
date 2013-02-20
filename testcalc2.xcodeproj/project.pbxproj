@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		475E870716D394D50062489C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475E870616D394D50062489C /* MapKit.framework */; };
+		47799BED16D4AE320080434F /* testThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47799BEC16D4AE320080434F /* testThirdViewController.m */; };
 		4791410A16D35E9900C24048 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4791410916D35E9900C24048 /* UIKit.framework */; };
 		4791410C16D35E9900C24048 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4791410B16D35E9900C24048 /* Foundation.framework */; };
 		4791410E16D35E9900C24048 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4791410D16D35E9900C24048 /* CoreGraphics.framework */; };
@@ -41,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		475E870616D394D50062489C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		47799BEB16D4AE320080434F /* testThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testThirdViewController.h; sourceTree = "<group>"; };
+		47799BEC16D4AE320080434F /* testThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testThirdViewController.m; sourceTree = "<group>"; };
 		4791410616D35E9900C24048 /* testcalc2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testcalc2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4791410916D35E9900C24048 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4791410B16D35E9900C24048 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -76,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475E870716D394D50062489C /* MapKit.framework in Frameworks */,
 				4791410A16D35E9900C24048 /* UIKit.framework in Frameworks */,
 				4791410C16D35E9900C24048 /* Foundation.framework in Frameworks */,
 				4791410E16D35E9900C24048 /* CoreGraphics.framework in Frameworks */,
@@ -117,6 +123,7 @@
 		4791410816D35E9900C24048 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				475E870616D394D50062489C /* MapKit.framework */,
 				4791410916D35E9900C24048 /* UIKit.framework */,
 				4791410B16D35E9900C24048 /* Foundation.framework */,
 				4791410D16D35E9900C24048 /* CoreGraphics.framework */,
@@ -131,6 +138,8 @@
 				4791411816D35E9900C24048 /* testAppDelegate.h */,
 				4791411916D35E9900C24048 /* testAppDelegate.m */,
 				4791412116D35E9900C24048 /* MainStoryboard.storyboard */,
+				47799BEB16D4AE320080434F /* testThirdViewController.h */,
+				47799BEC16D4AE320080434F /* testThirdViewController.m */,
 				4791412416D35E9900C24048 /* testFirstViewController.h */,
 				4791412516D35E9900C24048 /* testFirstViewController.m */,
 				4791412716D35E9900C24048 /* first.png */,
@@ -296,6 +305,7 @@
 				4791411A16D35E9900C24048 /* testAppDelegate.m in Sources */,
 				4791412616D35E9900C24048 /* testFirstViewController.m in Sources */,
 				4791412D16D35E9900C24048 /* testSecondViewController.m in Sources */,
+				47799BED16D4AE320080434F /* testThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +417,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "testcalc2/testcalc2-Prefix.pch";
 				INFOPLIST_FILE = "testcalc2/testcalc2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -418,7 +430,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "testcalc2/testcalc2-Prefix.pch";
 				INFOPLIST_FILE = "testcalc2/testcalc2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -476,6 +490,7 @@
 				4791414B16D35E9900C24048 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4791414C16D35E9900C24048 /* Build configuration list for PBXNativeTarget "testcalc2Tests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +499,7 @@
 				4791414E16D35E9900C24048 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

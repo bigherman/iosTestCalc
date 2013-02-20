@@ -13,6 +13,8 @@
 @end
 
 @implementation testSecondViewController
+@synthesize lblIndicator;
+@synthesize segSelector;
 
 - (void)viewDidLoad
 {
@@ -26,4 +28,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)segSelectionChanged:(id)sender
+{
+    if (segSelector.selectedSegmentIndex == 0)
+    {
+        lblIndicator.text = @"First!!!";
+    }
+    else if (segSelector.selectedSegmentIndex == 1)
+    {
+        lblIndicator.text = @"Second!!!";
+    }
+    else if (segSelector.selectedSegmentIndex == 2)
+    {
+        lblIndicator.text = @"Third!!!";
+    }
+    else
+    {
+        lblIndicator.text = @"None of the above";
+    }
+        
+}
 @end
