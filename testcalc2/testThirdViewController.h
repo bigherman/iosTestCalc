@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @interface testThirdViewController : UIViewController
-
+<MKMapViewDelegate>
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segControl;
+- (IBAction)segValueChanged:(id)sender;
+@property (weak, nonatomic) IBOutlet MKMapView *myMapView;
 @end

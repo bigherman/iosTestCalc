@@ -138,20 +138,91 @@
             </objects>
             <point key="canvasLocation" x="653" y="498"/>
         </scene>
-        <!--Test Third View Controller - Item-->
+        <!--Test Third View Controller - Map-->
         <scene sceneID="f6m-8Y-Oba">
             <objects>
                 <viewController id="9oU-fz-Klo" customClass="testThirdViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i0N-PP-SAy">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="Jkt-Mf-Xz0">
+                                <items>
+                                    <navigationItem id="m6U-C1-QPv">
+                                        <nil key="title"/>
+                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="5fX-Gs-rpU">
+                                            <rect key="frame" x="96" y="7" width="128" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="First"/>
+                                                <segment title="Second"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="segValueChanged:" destination="9oU-fz-Klo" eventType="valueChanged" id="UBp-na-13i"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gyZ-HT-Hxe">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="455" id="kva-Yg-VBJ"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gyZ-HT-Hxe" firstAttribute="trailing" secondItem="i0N-PP-SAy" secondAttribute="trailing" type="default" id="AuJ-JJ-HJt"/>
+                            <constraint firstItem="gyZ-HT-Hxe" firstAttribute="top" secondItem="i0N-PP-SAy" secondAttribute="top" constant="38" id="BX3-bh-ufB"/>
+                            <constraint firstItem="Jkt-Mf-Xz0" firstAttribute="leading" secondItem="i0N-PP-SAy" secondAttribute="leading" type="default" id="CGd-cw-ieE"/>
+                            <constraint firstItem="Jkt-Mf-Xz0" firstAttribute="trailing" secondItem="i0N-PP-SAy" secondAttribute="trailing" type="default" id="MvS-VC-fdL"/>
+                            <constraint firstItem="Jkt-Mf-Xz0" firstAttribute="top" secondItem="i0N-PP-SAy" secondAttribute="top" type="default" id="Qft-5E-nCX"/>
+                            <constraint firstItem="gyZ-HT-Hxe" firstAttribute="leading" secondItem="i0N-PP-SAy" secondAttribute="leading" type="default" id="cfO-hN-Tcx"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Et4-aY-K3y"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="second.png" id="Et4-aY-K3y"/>
+                    <connections>
+                        <outlet property="myMapView" destination="gyZ-HT-Hxe" id="psN-rp-OYB"/>
+                        <outlet property="segControl" destination="5fX-Gs-rpU" id="H6V-kB-i1c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhA-pj-nJz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="662" y="1159"/>
+        </scene>
+        <!--Test Fourth View Controller - Paul-->
+        <scene sceneID="4Kz-1s-Kpz">
+            <objects>
+                <viewController id="8hm-Nw-Fc9" customClass="testFourthViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pcj-zC-F7k">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Axi-aN-NvA"/>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Xm-0F-ue8">
+                                <connections>
+                                    <action selector="switchColor:" destination="8hm-Nw-Fc9" eventType="valueChanged" id="zNv-N8-QfR"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Axi-aN-NvA" firstAttribute="leading" secondItem="Pcj-zC-F7k" secondAttribute="leading" type="default" id="68H-Qc-gGF"/>
+                            <constraint firstItem="Axi-aN-NvA" firstAttribute="trailing" secondItem="Pcj-zC-F7k" secondAttribute="trailing" type="default" id="CKg-a4-D8H"/>
+                            <constraint firstAttribute="trailing" secondItem="0Xm-0F-ue8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="KoI-mI-JGF"/>
+                            <constraint firstItem="Axi-aN-NvA" firstAttribute="top" secondItem="Pcj-zC-F7k" secondAttribute="top" type="default" id="Nyk-aI-4Sw"/>
+                            <constraint firstItem="0Xm-0F-ue8" firstAttribute="top" secondItem="Pcj-zC-F7k" secondAttribute="top" constant="20" symbolic="YES" type="default" id="jfK-JB-tiG"/>
+                            <constraint firstItem="Axi-aN-NvA" firstAttribute="bottom" secondItem="Pcj-zC-F7k" secondAttribute="bottom" type="default" id="pHA-93-0da"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Paul" image="first.png" id="Qxa-2E-K8Z"/>
+                    <connections>
+                        <outlet property="imgView" destination="Axi-aN-NvA" id="ddU-uc-bTt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Smd-Hy-fmI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="663" y="1867"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -167,6 +238,7 @@
                         <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
                         <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
                         <segue destination="9oU-fz-Klo" kind="relationship" relationship="viewControllers" id="QNi-Mh-le9"/>
+                        <segue destination="8hm-Nw-Fc9" kind="relationship" relationship="viewControllers" id="7DF-YL-lvi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
@@ -177,7 +249,45 @@
     <resources>
         <image name="first.png" width="30" height="30"/>
         <image name="second" width="16" height="16"/>
+        <image name="second.png" width="30" height="30"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="testFirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/testFirstViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnResult:"/>
+                <relationship kind="outlet" name="text1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="text2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="text3" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="testFourthViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/testFourthViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="switchColor:"/>
+                <relationship kind="outlet" name="imgView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="testSecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/testSecondViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="segSelectionChanged:"/>
+                <relationship kind="outlet" name="lblIndicator" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="segSelector" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="testThirdViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/testThirdViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="segValueChanged:"/>
+                <relationship kind="outlet" name="myMapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="segControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
