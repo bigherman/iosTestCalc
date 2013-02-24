@@ -14,3 +14,4 @@
 @property (weak, nonatomic) IBOutlet UITextField *text3;
 - (IBAction)btnResult:(id)sender;
 @end
+

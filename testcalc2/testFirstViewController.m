@@ -37,5 +37,10 @@
     float result = tal1 + tal2;
     
     text3.text = [NSString stringWithFormat:@"%0.2f", result];
+    
+    [[self view] endEditing:NO];
 }
+
+
+
 @end

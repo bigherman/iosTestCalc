@@ -13,5 +13,5 @@
 <MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segControl;
 - (IBAction)segValueChanged:(id)sender;
-@property (weak, nonatomic) IBOutlet MKMapView *myMapView;
+@property (strong, nonatomic) IBOutlet MKMapView *myMapView;
 @end
