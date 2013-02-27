@@ -13,12 +13,46 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //Register the preference defaults early.
-    NSDictionary *appDefaults = [NSDictionary
+    /*NSDictionary *appDefaults = [NSDictionary
                                  dictionaryWithObject:[NSNumber numberWithBool:NO]
                                  forKey:@"paulBW"];
-    [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];*/
+    
+    NSString *paulBW = [[NSUserDefaults standardUserDefaults] objectForKey:@"paulBW"];
+    NSLog(@"paulBW before is %@", paulBW);
+    
+    // Note: this will not work for boolean values as noted by bpapa below.
+    // If you use booleans, you should use objectForKey above and check for null
+    if(paulBW == NULL) {
+        [self registerDefaultsFromSettingsBundle];
+        paulBW = [[NSUserDefaults standardUserDefaults] objectForKey:@"paulBW"];
+    }
+    NSLog(@"paulBW after is %@", paulBW);
     
     return YES;
+}
+
+- (void)registerDefaultsFromSettingsBundle
+{
+    NSString *settingsBundle = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
+    if(!settingsBundle)
+    {
+        NSLog(@"Could not find Settings.bundle");
+        return;
+    }
+    
+    NSDictionary *settings = [NSDictionary dictionaryWithContentsOfFile:[settingsBundle stringByAppendingPathComponent:@"Root.plist"]];
+    NSArray *preferences = [settings objectForKey:@"PreferenceSpecifiers"];
+    
+    NSMutableDictionary *defaultsToRegister = [[NSMutableDictionary alloc] initWithCapacity:[preferences count]];
+    for(NSDictionary *prefSpecification in preferences) {
+        NSString *key = [prefSpecification objectForKey:@"Key"];
+        if(key) {
+            [defaultsToRegister setObject:[prefSpecification objectForKey:@"DefaultValue"] forKey:key];
+        }
+    }
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultsToRegister];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -35,7 +69,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -47,5 +81,7 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
 
 @end

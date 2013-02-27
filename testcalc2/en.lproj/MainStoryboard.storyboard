@@ -199,19 +199,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Axi-aN-NvA"/>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Xm-0F-ue8">
-                                <connections>
-                                    <action selector="switchColor:" destination="8hm-Nw-Fc9" eventType="valueChanged" id="zNv-N8-QfR"/>
-                                </connections>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Axi-aN-NvA" firstAttribute="leading" secondItem="Pcj-zC-F7k" secondAttribute="leading" type="default" id="68H-Qc-gGF"/>
                             <constraint firstItem="Axi-aN-NvA" firstAttribute="trailing" secondItem="Pcj-zC-F7k" secondAttribute="trailing" type="default" id="CKg-a4-D8H"/>
-                            <constraint firstAttribute="trailing" secondItem="0Xm-0F-ue8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="KoI-mI-JGF"/>
                             <constraint firstItem="Axi-aN-NvA" firstAttribute="top" secondItem="Pcj-zC-F7k" secondAttribute="top" type="default" id="Nyk-aI-4Sw"/>
-                            <constraint firstItem="0Xm-0F-ue8" firstAttribute="top" secondItem="Pcj-zC-F7k" secondAttribute="top" constant="20" symbolic="YES" type="default" id="jfK-JB-tiG"/>
                             <constraint firstItem="Axi-aN-NvA" firstAttribute="bottom" secondItem="Pcj-zC-F7k" secondAttribute="bottom" type="default" id="pHA-93-0da"/>
                         </constraints>
                     </view>

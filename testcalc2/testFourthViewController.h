@@ -11,6 +11,4 @@
 @interface testFourthViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
 
-- (IBAction)switchColor:(id)sender;
-
 @end

@@ -15,59 +15,49 @@
 @implementation testFourthViewController
 @synthesize imgView;
 
-//bool colorImage = YES;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    //NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    
-    [imgView setImage:[UIImage imageNamed:@"paul.jpg"]];
-    //colorImage = YES;
-    //[defaults setBool:NO forKey:@"paulBW"];
-}
-
-/*- (void) viewWillAppear
-{
-    [super viewWillAppear:NO];
-    
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    if(![defaults boolForKey:@"paulBW"])
+    NSLog(@"paulBW is %d on load", [defaults boolForKey:@"paulBW"]);
+
+    if([defaults boolForKey:@"paulBW"]==1)
     {
         [imgView setImage:[UIImage imageNamed:@"paulbw.jpg"]];
-        //colorImage = NO;
-        //[defaults setBool:YES forKey:@"paulBW"];
     }
     else
     {
         [imgView setImage:[UIImage imageNamed:@"paul.jpg"]];
-        //colorImage = YES;
-        //[defaults setBool:NO forKey:@"paulBW"];
     }
-}*/
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self refreshPicture];
+    
+    [super viewWillAppear:animated];
+}
+
+- (void) refreshPicture
+{
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSLog(@"paulBW is %d on appear", [defaults boolForKey:@"paulBW"]);
+    
+    if([defaults boolForKey:@"paulBW"]==1)
+    {
+        [imgView setImage:[UIImage imageNamed:@"paulbw.jpg"]];
+    }
+    else
+    {
+        [imgView setImage:[UIImage imageNamed:@"paul.jpg"]];
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)switchColor:(id)sender
-{
-    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    if(![defaults boolForKey:@"paulBW"])
-    {
-        [imgView setImage:[UIImage imageNamed:@"paulbw.jpg"]];
-        //colorImage = NO;
-        [defaults setBool:YES forKey:@"paulBW"];
-    }
-    else
-    {
-        [imgView setImage:[UIImage imageNamed:@"paul.jpg"]];
-        //colorImage = YES;
-        [defaults setBool:NO forKey:@"paulBW"];
-    }
 }
 
 @end
