@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		470DD0BA16D5666600923229 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 470DD0B916D5666600923229 /* ic_launcher.png */; };
 		470DD0BC16D5669000923229 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 470DD0BB16D5669000923229 /* ic_launcher.png */; };
+		473C1F3B16DD7A1400C37BAC /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 473C1F3A16DD7A1400C37BAC /* Settings.bundle */; };
 		475E870716D394D50062489C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475E870616D394D50062489C /* MapKit.framework */; };
 		476E9C0D16D552D90007D412 /* testFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 476E9C0C16D552D90007D412 /* testFourthViewController.m */; };
 		476E9C0F16D555200007D412 /* paul.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 476E9C0E16D555200007D412 /* paul.jpg */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		470DD0B916D5666600923229 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		470DD0BB16D5669000923229 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
+		473C1F3A16DD7A1400C37BAC /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		475E870616D394D50062489C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		476E9C0B16D552D90007D412 /* testFourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testFourthViewController.h; sourceTree = "<group>"; };
 		476E9C0C16D552D90007D412 /* testFourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testFourthViewController.m; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				4791412116D35E9900C24048 /* MainStoryboard.storyboard */,
 				476E9C0B16D552D90007D412 /* testFourthViewController.h */,
 				476E9C0C16D552D90007D412 /* testFourthViewController.m */,
+				473C1F3A16DD7A1400C37BAC /* Settings.bundle */,
 				47799BEB16D4AE320080434F /* testThirdViewController.h */,
 				47799BEC16D4AE320080434F /* testThirdViewController.m */,
 				4791412416D35E9900C24048 /* testFirstViewController.h */,
@@ -288,6 +291,7 @@
 				476E9C1116D559F30007D412 /* paulbw.jpg in Resources */,
 				470DD0BA16D5666600923229 /* ic_launcher.png in Resources */,
 				470DD0BC16D5669000923229 /* ic_launcher.png in Resources */,
+				473C1F3B16DD7A1400C37BAC /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -251,43 +251,6 @@
         <image name="second" width="16" height="16"/>
         <image name="second.png" width="30" height="30"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="testFirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/testFirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="btnResult:"/>
-                <relationship kind="outlet" name="text1" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="text2" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="text3" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="testFourthViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/testFourthViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="switchColor:"/>
-                <relationship kind="outlet" name="imgView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="testSecondViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/testSecondViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="segSelectionChanged:"/>
-                <relationship kind="outlet" name="lblIndicator" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="segSelector" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="testThirdViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/testThirdViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="segValueChanged:"/>
-                <relationship kind="outlet" name="myMapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="segControl" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

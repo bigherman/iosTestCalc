@@ -14,14 +14,38 @@
 
 @implementation testFourthViewController
 @synthesize imgView;
-bool colorImage = YES;
+
+//bool colorImage = YES;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+    
+    //NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    
     [imgView setImage:[UIImage imageNamed:@"paul.jpg"]];
+    //colorImage = YES;
+    //[defaults setBool:NO forKey:@"paulBW"];
 }
+
+/*- (void) viewWillAppear
+{
+    [super viewWillAppear:NO];
+    
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    if(![defaults boolForKey:@"paulBW"])
+    {
+        [imgView setImage:[UIImage imageNamed:@"paulbw.jpg"]];
+        //colorImage = NO;
+        //[defaults setBool:YES forKey:@"paulBW"];
+    }
+    else
+    {
+        [imgView setImage:[UIImage imageNamed:@"paul.jpg"]];
+        //colorImage = YES;
+        //[defaults setBool:NO forKey:@"paulBW"];
+    }
+}*/
 
 - (void)didReceiveMemoryWarning
 {
@@ -31,15 +55,18 @@ bool colorImage = YES;
 
 - (IBAction)switchColor:(id)sender
 {
-    if(colorImage)
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    if(![defaults boolForKey:@"paulBW"])
     {
         [imgView setImage:[UIImage imageNamed:@"paulbw.jpg"]];
-        colorImage = NO;
+        //colorImage = NO;
+        [defaults setBool:YES forKey:@"paulBW"];
     }
     else
     {
         [imgView setImage:[UIImage imageNamed:@"paul.jpg"]];
-        colorImage = YES;
+        //colorImage = YES;
+        [defaults setBool:NO forKey:@"paulBW"];
     }
 }
 
